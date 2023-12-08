@@ -4,13 +4,13 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="gspConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="gspConnectionString (MySettings)" PropertyReference="ApplicationSettings.ConditionallyHideSeriesLabels.My.MySettings.GlobalReference.Default.gspConnectionString" Provider="System.Data.OleDb">
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="gspConnectionString" ConnectionStringObject="" IsAppSettingsProperty="True" Modifier="Assembly" Name="gspConnectionString (Settings)" PropertyReference="ApplicationSettings.ConditionallyHideSeriesLabels.Properties.Settings.GlobalReference.Default.gspConnectionString" Provider="System.Data.OleDb">
           </Connection>
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="GSPTableAdapter" GeneratorDataComponentClassName="GSPTableAdapter" Name="GSP" UserDataComponentName="GSPTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="gspConnectionString (MySettings)" DbObjectName="GSP" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="gspConnectionString (Settings)" DbObjectName="GSP" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="True" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="True" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="False">
                     <CommandText>DELETE FROM `GSP` WHERE ((`ID` = ?) AND ((? = 1 AND `Region` IS NULL) OR (`Region` = ?)) AND ((? = 1 AND `Year` IS NULL) OR (`Year` = ?)) AND ((? = 1 AND `GSP` IS NULL) OR (`GSP` = ?)))</CommandText>
@@ -103,7 +103,7 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msprop:Generator_UserColumnName="ID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInTable="IDColumn" type="xs:int" />
-              <xs:element name="Region" msprop:Generator_UserColumnName="Region" msprop:Generator_ColumnPropNameInRow="_Region" msprop:Generator_ColumnVarNameInTable="columnRegion" msprop:Generator_ColumnPropNameInTable="RegionColumn" minOccurs="0">
+              <xs:element name="Region" msprop:Generator_UserColumnName="Region" msprop:Generator_ColumnPropNameInRow="Region" msprop:Generator_ColumnVarNameInTable="columnRegion" msprop:Generator_ColumnPropNameInTable="RegionColumn" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
