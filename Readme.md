@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# Chart for Winforms - How to Conditionally Hide Series Labels
+# Chart for WinForms - How to Conditionally Hide Series Labels
 
 This example demonstrates how to conditionally hide series labels of charts. Handle the [ChartControl.CustomDrawSeriesPoint](https://docs.devexpress.com/WindowsForms/DevExpress.XtraCharts.ChartControl.CustomDrawSeriesPoint) event and change the [e.LabelText](https://docs.devexpress.com/CoreLibraries/DevExpress.XtraCharts.CustomDrawSeriesPointEventArgs.LabelText) parameter's value.
 
