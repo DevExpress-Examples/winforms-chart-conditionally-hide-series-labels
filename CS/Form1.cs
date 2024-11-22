@@ -18,10 +18,11 @@ namespace ConditionallyHideSeriesLabels {
 
             chartControl1.SeriesTemplate.ArgumentDataMember = @"Year";
             chartControl1.SeriesTemplate.ValueDataMembers.AddRange(@"Product");
+            
         }
 
         private void chartControl1_CustomDrawSeriesPoint(object sender, CustomDrawSeriesPointEventArgs e) {
-            // If the value is less than 1, hide the point's label.
+            // Hide all point's labels except the last one.
 
             var test = e.Series.Points.Max(p => p.ArgumentX.NumericalArgument);
 

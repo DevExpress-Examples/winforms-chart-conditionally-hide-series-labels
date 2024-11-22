@@ -22,7 +22,7 @@ Namespace ConditionallyHideSeriesLabels
         End Sub
 
         Private Sub chartControl1_CustomDrawSeriesPoint(ByVal sender As Object, ByVal e As CustomDrawSeriesPointEventArgs)
-            ' If the value is less than 1, hide the point's label.
+            ' Hide all point's labels except the last one.
             Dim test = e.Series.Points.Max(Function(p) p.ArgumentX.NumericalArgument)
             If Not Enumerable.Max(e.Series.Points, Function(p) p.ArgumentX.NumericalArgument).Equals(e.SeriesPoint.NumericalArgument) Then
                 e.LabelText = ""
